@@ -1,0 +1,33 @@
+{
+  "name": "devmobile-local-base",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Pacote de referencia para reorganizacao da versao local do DevMobile",
+  "notes": {
+    "objetivo": "Servir como referencia documental, nao para substituir automaticamente o package.json atual",
+    "usarQuando": "Ao reorganizar dependencias para uma versao mais limpa do app"
+  },
+  "grupos": {
+    "manterProvavelmente": [
+      "expo",
+      "react",
+      "react-native",
+      "expo-router",
+      "react-native-safe-area-context",
+      "react-native-gesture-handler",
+      "@tanstack/react-query"
+    ],
+    "revisarSeDependemDeServidor": [
+      "react-native-webview",
+      "bibliotecas de terminal remoto",
+      "bibliotecas acopladas a preview remoto",
+      "clientes de API interna"
+    ],
+    "avaliarParaModoLocal": [
+      "sqlite",
+      "armazenamento local",
+      "integracao com termux",
+      "provedores de IA diretos"
+    ]
+  }
+}
