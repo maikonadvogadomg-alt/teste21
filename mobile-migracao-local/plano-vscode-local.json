@@ -1,0 +1,45 @@
+{
+  "tema": "VS Code local / code-server / editor simplificado",
+  "resumo": {
+    "editorLocalSimples": true,
+    "codeServerRealSemServidor": false,
+    "codeServerLocalComServidorNoCelular": true
+  },
+  "cenarios": [
+    {
+      "nome": "Editor visual estilo VS Code",
+      "viavel": true,
+      "requisitos": [
+        "componentes locais",
+        "editor embutido",
+        "arquivos locais"
+      ]
+    },
+    {
+      "nome": "code-server real sem nenhum servidor",
+      "viavel": false,
+      "motivo": "code-server precisa de um processo servindo a interface"
+    },
+    {
+      "nome": "code-server real com servidor local no celular",
+      "viavel": true,
+      "requisitos": [
+        "Termux ou processo local",
+        "porta local funcionando",
+        "acesso localhost",
+        "autenticacao/configuracao"
+      ]
+    }
+  ],
+  "arquivosDoProjetoRelacionados": [
+    "api-server/src/lib/codeServer.ts",
+    "mobile/components/VSCodeView.tsx",
+    "mobile/components/PreviewPanel.tsx",
+    "mobile/hooks/useApiBase.ts"
+  ],
+  "recomendacao": [
+    "Primeiro desacoplar do Replit",
+    "Depois manter apenas editor local",
+    "Por ultimo testar code-server local no celular"
+  ]
+}
