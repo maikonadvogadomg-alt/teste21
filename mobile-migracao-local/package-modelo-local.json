@@ -1,0 +1,47 @@
+{
+  "name": "devmobile-local-plan",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Modelo documental para orientar a versao local do DevMobile",
+  "objetivo": {
+    "principal": "Rodar no celular sem depender do servidor Replit",
+    "prioridade": [
+      "editor local",
+      "arquivos locais",
+      "tarefas locais",
+      "configuracoes locais",
+      "modo offline",
+      "IA direta opcional",
+      "terminal local futuro",
+      "VS Code-like futuro"
+    ]
+  },
+  "modos": {
+    "local": {
+      "descricao": "Sem backend remoto",
+      "deveFuncionar": [
+        "editor",
+        "tarefas",
+        "arquivos locais",
+        "configuracoes"
+      ]
+    },
+    "remoto": {
+      "descricao": "Somente se houver backend configurado",
+      "recursos": [
+        "terminal remoto",
+        "preview remoto",
+        "code-server remoto",
+        "proxy IA",
+        "busca backend",
+        "github backend"
+      ]
+    }
+  },
+  "substituicoes": {
+    "vscodeRemoto": "editor local ou Monaco local",
+    "terminalRemoto": "Termux futuro ou modo desativado",
+    "apiReplit": "baseUrl configuravel ou null",
+    "previewServidor": "preview local quando possivel"
+  }
+}
