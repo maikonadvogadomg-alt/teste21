@@ -1,0 +1,63 @@
+{
+  "projeto": "DevMobile",
+  "objetivo": "Desacoplar o app mobile do servidor Replit e preparar uma versÃ£o APK local",
+  "prioridades": [
+    {
+      "ordem": 1,
+      "titulo": "Limpeza estrutural",
+      "itens": [
+        "Remover mockup-sandbox",
+        "Remover mobile/.expo",
+        "Remover api-server/dist"
+      ]
+    },
+    {
+      "ordem": 2,
+      "titulo": "Desacoplamento de backend remoto",
+      "itens": [
+        "Revisar .env",
+        "Revisar useApiBase",
+        "Eliminar dominio remoto padrao",
+        "Criar fallback local/offline"
+      ]
+    },
+    {
+      "ordem": 3,
+      "titulo": "Desativacao controlada de recursos remotos",
+      "itens": [
+        "Terminal remoto",
+        "Preview remoto",
+        "GitHub via backend",
+        "Banco remoto",
+        "Busca web via backend",
+        "Proxy de IA"
+      ]
+    },
+    {
+      "ordem": 4,
+      "titulo": "Preparacao para APK",
+      "itens": [
+        "Revisar app.json",
+        "Revisar permissoes Android",
+        "Validar dependencias",
+        "Build com EAS"
+      ]
+    }
+  ],
+  "arquivosCriticos": [
+    "mobile/.env",
+    "mobile/hooks/useApiBase.ts",
+    "mobile/context/AppContext.tsx",
+    "mobile/components/SystemStatus.tsx",
+    "mobile/components/Terminal.tsx",
+    "mobile/components/PreviewPanel.tsx",
+    "mobile/app/(tabs)/terminal.tsx",
+    "mobile/app/(tabs)/settings.tsx",
+    "mobile/app/(tabs)/plugins.tsx"
+  ],
+  "resultadoEsperado": [
+    "App abre sem depender do servidor Replit",
+    "Modulos remotos nao quebram o app",
+    "APK pronto para testes locais"
+  ]
+}
